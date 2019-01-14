@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>mixedApp</title>
+        <!-- General Styles -->
+        <link rel="stylesheet" href="assets/css/generalStyle.css">
+        <!-- Components styles -->
+        <link rel="stylesheet" href="app/shared/header/headerStyle.css">
+        <link rel="stylesheet" href="app/shared/footer/footerStyle.css">
+        <link rel="stylesheet" href="app/components/pedidos/pedidosStyle.css">
+    </head>
+
+    <body ng-app="mixedApp">
+        <main>
+            <mixedapp-header></mixedapp-header>
+            <ng-view></ng-view>
+            <mixedapp-footer></mixedapp-footer>
+        </main>
+    </body>
+
+    <!-- Angular -->
+    <script src="assets/lib/angular.min.js"></script>
+    <script src="assets/lib/angular-route.min.js"></script>
+    <script src="app/module.js"></script>
+    <script src="app/router.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/pedidosService.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/components/home/homeController.js"></script>
+    <script src="app/components/pedidos/pedidosController.js"></script>
+    <script src="app/shared/header/headerController.js"></script>
+    <script src="app/shared/footer/footerController.js"></script>
+
+    <!-- Directives -->
+    <script src="app/components/home/homeDirective.js"></script>
+    <script src="app/components/pedidos/pedidosDirective.js"></script>
+    <script src="app/shared/header/headerDirective.js"></script>
+    <script src="app/shared/footer/footerDirective.js"></script>
+
+    
+</html>

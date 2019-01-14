@@ -1,0 +1,78 @@
+
+<div class="pedidos">
+    <section class="pedidos__create">
+        <form class="pedidos__form">
+
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Nuevo periodo</legend>
+
+                <div class="form__fields">
+                    <div class="form__field">
+                        <label class="form__label" for="pedido_title">Titulo</label>
+                        <input class="form__input" type="text" id="pedido_title" ng-model="pedido.title">
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="pedido_description">Descripción</label>
+                        <input class="form__input" type="text" id="pedido_description" ng-model="pedido.description">
+                    </div>
+                </div>
+
+                <div class="form__buttons">
+                    <input class="form__submit" type="submit" ng-click="savePedido(pedido)" value="Crear pedido">
+                </div>
+
+            </fieldset>
+
+
+        </form>
+    </section>
+
+    <section class="pedidos__container">
+        <ul class="pedidos__items">
+            <li class="pedidos__item" ng-repeat="pedido in pedidos">
+
+                <div ng-switch on="pedido.editable">
+                
+                    <div ng-switch-when="0">
+                
+                        <div ng-click="deletePedido(pedido)" class="item__remove">
+                            <span>&#10006</span>
+                        </div>
+                
+                        <div ng-click="editPedido(pedido)" class="item__edit">
+                            <span>&#9998</span>
+                        </div>
+                
+                        <div class="item__title">
+                            <h2>{{pedido.title}}</h2>
+                        </div>
+                
+                        <div class="item__description">
+                            <p>{{pedido.description}}</p>
+                        </div>
+                
+                    </div>
+                
+                    <div ng-switch-when="1">
+                    
+                        <div ng-click="savePedido(pedido)" class="item__confirm">
+                            <span>&#10003</span>
+                        </div>
+                    
+                        <div class="item__title">
+                            <input class="item__title--edit" type="text" ng-model="pedido.title">
+                        </div>
+                    
+                        <div class="item__description">
+                            <textarea cols="40" rows="6" ng-model="pedido.description"></textarea>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </li>
+        </ul>
+    </section>
+
+</div>

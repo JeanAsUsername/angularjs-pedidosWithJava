@@ -1,0 +1,178 @@
+
+.pedidos {
+    height: 80vh;
+    min-height: 32rem;
+    width: 100%;
+    padding:0.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.2fr 2fr;
+
+}
+
+/* task__create */
+
+.pedidos__create, .pedidos__container {
+    height: 100%;
+    width: 100%;
+}
+
+.pedidos__create {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pedidos__form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form__fieldset {
+    height: fit-content;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem;
+}
+
+.form__legend {
+    text-align: center;
+}
+
+.form__fields  {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.form__field {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;  
+}
+
+.form__input {
+    padding: 0.2rem;
+}
+
+.form__label {
+    margin-right: 0.5rem;
+}
+
+.form__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form__submit {
+
+    padding: 0.2rem;
+    margin: 0 auto;
+}
+
+/* task__container */
+
+.pedidos__container {
+    height: 100%;
+    max-height: 31rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pedidos__items {
+    height: 90%;
+    max-height: 33rem;
+    width: 90%;
+    padding:  0.5rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.pedidos__item {
+    height: fit-content;
+    min-height: 9rem;
+    width: 90%;
+    position: relative;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content) 1fr;
+    border: 1px solid black;
+    
+    cursor: pointer;
+}
+
+@media (max-width:800px) {
+
+    .pedidos {
+        height: fit-content;
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        grid-template-columns: 1fr;
+    }
+}
+
+.item__remove {
+    position: absolute;
+    font-size: 1.1rem;
+    left: calc(100% - 1.1rem);
+    color: black;
+    transition: color 400ms;
+    cursor: pointer;
+}
+
+.item__edit {
+    position: absolute;
+    font-size: 1.1rem;
+    left: calc(100% - 1.1rem);
+    top: 1.2rem;
+    color: black;
+    transition: color 400ms;
+    cursor: pointer;
+
+}
+
+.item__confirm {
+    position: absolute;
+    font-size: 1.1rem;
+    left: calc(100% - 1.1rem);
+    color: black;
+    transition: color 400ms;
+    cursor: pointer;
+
+}
+
+.item__edit:hover, .item__remove:hover, .item__confirm:hover {
+    color: rgb(100, 100, 100)
+}
+
+.pedidos__item:hover {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+
+/* item */
+
+.item__title, .item__description {
+    padding: 0.4rem;
+}
+
+.item__title {
+    border-bottom: 1px solid black;
+}
+
+.item__title--edit {
+    padding: 0.2rem;
+}

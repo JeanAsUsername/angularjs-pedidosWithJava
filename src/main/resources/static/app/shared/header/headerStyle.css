@@ -1,0 +1,42 @@
+
+.header {
+    height: 10vh;
+    min-height: 4rem;
+    width: 100%; 
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.header__branch {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.branch__image {
+    height: 90%;
+    width: 8%;
+    min-width: 4rem;
+    max-width: 5rem;
+    margin-left: 0.4rem;
+
+    background-color: black;
+}
+
+
+.nav__options {
+    list-style: none;
+    display: flex;
+}
+
+.nav__option {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.nav__option:hover {
+    text-decoration: underline;
+}
